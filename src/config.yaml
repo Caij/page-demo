@@ -2,34 +2,34 @@ site:
   name: Flyy
   site: 'https://blog.caij.xyz'
   base: '/page-demo'
-  trailingSlash: true
+  trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: Flyy
-    template: '%s — Flyy'
-  description: "Clean and Beautiful Twitter&X App"
+    default: AstroWind
+    template: '%s — AstroWind'
+  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
-#  openGraph:
-#    site_name: Flyy
-#    images:
-#      - url: '~/assets/images/default.png'
-#        width: 1200
-#        height: 628
-#    type: website
-#  twitter:
-#    handle: '@onwidget'
-#    site: '@onwidget'
-#    cardType: summary_large_image
+  openGraph:
+    site_name: AstroWind
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@onwidget'
+    site: '@onwidget'
+    cardType: summary_large_image
 
-#i18n:
-#  language: en
-#  textDirection: ltr
+i18n:
+  language: en
+  textDirection: ltr
 
 apps:
   blog:

@@ -18,8 +18,6 @@ import {
   lazyImagesRehypePlugin,
 } from './src/utils/frontmatter.mjs';
 
-import astroI18next from "astro-i18next";
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -70,10 +68,10 @@ export default defineConfig({
       SVG: false,
       Logger: 1,
     }),
+
     astrowind({
       config: './src/config.yaml',
     }),
-    astroI18next(),
   ],
 
   image: {

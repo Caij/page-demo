@@ -1,15 +1,14 @@
 {
   "site": {
     "title": "Flyy-Twitter&X App",
-    "description": "Clean、Beautiful、NO ADs Twitter&X App"
+    "description": "Clean and Beautiful Twitter&X App"
   },
   "main": {
     "header": {
       "home": "Home",
       "features": "Features",
       "pricing": "Pricing",
-      "apps": "More Apps",
-      "changelog": "Changelog"
+      "apps": "More Apps"
     },
     "action": {
       "download": "Download"
@@ -33,8 +32,8 @@
         "description": "Supports blocking ads"
       },
       "item4": {
-        "title": "Edit Profile",
-        "description": "Edit name、avatar、desc、website、bio.."
+        "title": "Excellent Page Speed",
+        "description": "Simple and clean page style."
       },
       "item5": {
         "title": "Download medias",
@@ -92,8 +91,6 @@
         "title": "See",
         "description": "A clean app for Weibo"
       }
-    },
-    "privacy": "Privacy Policy",
-    "support": "Support"
+    }
   }
 }
