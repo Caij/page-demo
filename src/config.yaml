@@ -1,6 +1,6 @@
 site:
   name: Flyy
-  site: 'https://caij.github.io'
+  site: 'https://blog.caij.xyz'
   base: '/page-demo'
   trailingSlash: true
 
