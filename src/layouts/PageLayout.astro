@@ -51,12 +51,12 @@ const footerData =  {
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky false false />
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
     <slot />
   </main>
-  <slot name="footer">
-    <Footer {... footerData} />
-  </slot>
+  <!--<slot name="footer">-->
+  <!--  <Footer {... footerData} />-->
+  <!--</slot>-->
 </Layout>
