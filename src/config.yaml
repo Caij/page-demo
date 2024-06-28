@@ -1,8 +1,8 @@
 site:
   name: Flyy
-  site: 'https://flyy.caij.xyz'
-  base: '/'
-  trailingSlash: true
+  site: 'https://blog.caij.xyz'
+  base: '/page-demo'
+  trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
