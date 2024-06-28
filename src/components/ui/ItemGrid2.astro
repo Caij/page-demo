@@ -3,6 +3,7 @@ import type { ItemGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
+import Image from "../common/Image.astro";
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -32,14 +33,21 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, icon, alt,href, callToAction, classes: itemClasses = {} }) => (
         <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
           {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+            <!--<Image src="" class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />-->
+            <Image
+              class={twMerge('mb-2 w-10 h-10 shadow rounded-md', defaultIconClass, itemClasses?.icon)}
+              width={50}
+              height={50}
+              layout="fixed"
+              alt={alt}
+              src={icon}/>
           )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <div class={twMerge('text-ms font-semibold', titleClass, itemClasses?.title)}><a href={href}>{title}</a></div>
           {description && (
-            <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+            <a class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} href={href}>{description}</a>
           )}
           {callToAction && (
             <div class="mt-2">

@@ -4,6 +4,9 @@ import { SITE, APP_BLOG } from 'astrowind:config';
 
 import { trim } from '~/utils/utils';
 
+import i18next from "i18next";
+import { localizePath } from "astro-i18next";
+
 export const trimSlash = (s: string) => trim(trim(s, '/'));
 const createPath = (...params: string[]) => {
   const paths = params
@@ -101,7 +104,7 @@ export const getAsset = (path: string): string =>
     .join('/');
 
 /** */
-const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
+const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, localizePath(permalink, i18next.language));
 
 /** */
 export const applyGetPermalinks = (menu: object = {}) => {
