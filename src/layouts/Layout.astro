@@ -24,7 +24,7 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-
+const currentUrl = Astro.url.href;
 ---
 
 <!doctype html>
@@ -89,6 +89,7 @@ const { metadata = {} } = Astro.props;
     </script>
   </head>
   <body class="antialiased text-default bg-page tracking-tight">
+  <h1>${currentUrl}</h1>
     <slot />
 
     <BasicScripts />
