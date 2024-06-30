@@ -18,13 +18,14 @@ import type { MetaData as MetaDataType } from '~/types';
 import i18next from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import HeadHrefLangsWithDefault from "./HeadHrefLangsWithDefault.astro";
+import { SITE } from 'astrowind:config';
 
 export interface Props {
   metadata?: MetaDataType;
 }
 
 const { metadata = {} } = Astro.props;
-const currentUrl = Astro.url.href;
+const currentUrl = new URL(Astro.url.pathname, SITE.site).href;
 ---
 
 <!doctype html>
